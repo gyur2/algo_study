@@ -1,7 +1,6 @@
 import java.util.*;
 
-public class Main {
-
+public class BOJ1110 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
