@@ -1,25 +1,24 @@
+package conditional;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BOJ2884 {
+public class BOJ1330 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 
-        int h = Integer.parseInt(st.nextToken());
+        int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
 
-        if (m < 45){
-            h--;
-            m = 60 - (45 - m);
-            if (h < 0){
-                h = 23;
-            }
-            System.out.println(h + " " + m);
+        if (n > m) {
+            System.out.println('>');
+        } else if (n < m){
+            System.out.println('<');
         } else {
-            System.out.println(h + " " + (m-45));
+            System.out.println("==");
         }
     }
 }
