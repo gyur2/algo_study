@@ -16,7 +16,4 @@ for i in range(len(front)):
     frontSum += int(front[i])
     backSum += int(back[i])
 
-if frontSum == backSum:
-    print("LUCKY")
-else:
-    print("READY")
+print("LUCKY") if frontSum == backSum else print("READY")
