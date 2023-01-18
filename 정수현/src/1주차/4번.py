@@ -10,7 +10,4 @@ M = int(input())
 B = list(input().split())
 
 for i in range(len(B)):
-    if B[i] in A:
-        print(1)
-    else:
-        print(0)
+    print(1) if B[i] in A else print(0)
