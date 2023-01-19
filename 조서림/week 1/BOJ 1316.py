@@ -22,4 +22,4 @@ for word in words:
 print(answer)
 
 # check == 0 : 상관 없음
-# chekc == 1 : prev와 curr가 같으면 괜찮음, prev와 curr가 다르면 정답에서 제외
+# check == 1 : prev와 curr가 같으면 괜찮음, prev와 curr가 다르면 정답에서 제외

@@ -6,7 +6,6 @@ for _ in range(n):
 friends = [[0] * n for _ in range(n)]
 
 for grade in range(5):
-    friend = [0] * n
     for i in range(n-1):
         for j in range(i+1, n):
             if class_info[i][grade] == class_info[j][grade]:
