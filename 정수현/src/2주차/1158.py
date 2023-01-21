@@ -1,5 +1,6 @@
 # 백준 1158: 요세푸스 문제 / 실버4
 # 풀이 시간: 30분
+# https://www.acmicpc.net/problem/1158
 # 큐
 
 # queue = 1 ~ N번까지의 원.
@@ -18,5 +19,6 @@ for i in range(N):
     # answer에 해당 원소를 추가해주고, 그대로 pop
     answer.append(queue.pop(index))
 
+# 개선 필요?
 print("<", end="")
 print(', '.join(map(str, answer)) + '>')
