@@ -4,7 +4,7 @@
 # 백트래킹 -> 재귀?
 # 인터넷 참고: https://veggie-garden.tistory.com/24
 
-# N: 자연수의 범위, # M: 수열의 원소 개수
+# N: 자연수의 범위, M: 수열의 원소 개수
 # answer = 수열
 N, M = map(int, input().split())
 answer = []
