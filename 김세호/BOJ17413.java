@@ -16,7 +16,6 @@ public class BOJ17413 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         String s = br.readLine();
-        int len = 0;
         Stack<Character> st = new Stack<>();
 
         boolean isTag = false;

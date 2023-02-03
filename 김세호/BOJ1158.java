@@ -1,6 +1,5 @@
 // 13:40
 // 15:40
-
 // queue를 이용하여 앞에서부터 k-1개만큼 빼서 뒤로 다시 삽입하고 출력
 package 김세호;
 
@@ -27,9 +26,9 @@ public class BOJ1158 {
 
         while(q.size() > 1){
             for(int i = 0; i < k-1; i++){
-                q.add(q.poll());
+                q.add(q.poll()); // queue에서 빼서 다시 넣는 작업
         }
-            System.out.print(q.poll() + ", ");
+            System.out.print(q.poll() + ", "); // 3번째마다 queue에서 빼서 출력
         }
         System.out.print(q.poll());
         System.out.print('>');
