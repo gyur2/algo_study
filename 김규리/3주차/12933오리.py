@@ -1,32 +1,38 @@
-s = input()
-duck = 'quack'
+#시간도 지나고 고칠 시간이 없어서 따라하기
+# 일단 참고 https://tmdrl5779.tistory.com/128
+#quack문자를 만들어 q를 방문했으면 index를 증가시켜 다음 u를 비교하도록 함.
+
+duck = input()
+visited = [False] * len(duck)
 cnt = 0
-x = s[0]
-tt = ''
-for i in s:
-    if i == 'q':
-        tt += duck + ' '
-print(tt.split())
-############
-#5번을 통과시킬 버전 - 이전 분자를 잘라 저장
-#리스트에 quack을 저장. ['qu', 'quac', 'qua']이렇게 들어있다.
-#만약 이 상황에서 'u'가 들어온다면 그 다음으로 들어가야할 게 없기 때문에, -1 출력
-#하지만 'k'가 들어온다면 두번째 경우에 맞기 때문에 통과되고 두번째 인덱스가 꽉차면 ''로 초기화된다.
 
-x_idx = 0 #다른 것일 경우 문자열을 자르는데 그 자르는 위치
-cnt_ls = [] #다르면 넣을 리스트
-d_idx = 0
-
-###############
-#5번 제외는 됨. 이건 10분걸림. 근데 5번을 어떻게 해야할지 감을 못 잡음
-# for i in range(len(s)):
-#     if s[0] != 'q':
-#         cnt = -1
-#         break
-#     if s[i] == 'q':
-#         if x != 'k':
-#             cnt += 1
-#     x = s[i]
+if len(duck) % 5 != 0:
+    print(-1)
+    exit()
 
 
-print(cnt)
+def solve(start):
+    global cnt
+    quack = 'quack'
+    j = 0
+    first = True
+    for i in range(start, len(duck)):
+        if duck[i] == quack[j] and not visited[i]:
+            visited[i] = True
+            if duck[i] == 'k':
+                if first:
+                    cnt += 1
+                    first = False
+                j = 0
+                continue
+            j += 1
+
+
+for i in range(len(duck)):
+    if duck[i] == 'q' and not visited[i]:
+        solve(i)
+
+if not all(visited) or cnt == 0:
+    print(-1)
+else:
+    print(cnt)
