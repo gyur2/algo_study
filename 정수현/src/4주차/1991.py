@@ -1,4 +1,4 @@
-# [BOJ] 트리 순회 / 실버1 / X
+# [BOJ] 트리 순회 / 실버1 / 40분
 # https://www.acmicpc.net/problem/1991
 # https://jm-codingmemo.tistory.com/22
 # 이전에 직접 작성한 소스코드 참고
